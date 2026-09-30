@@ -1,0 +1,15 @@
+# Python deps for the Numba-CUDA dissolution simulator.
+#   pip3 install -r requirements.txt
+# The CUDA toolkit is NOT provided by this file: see AGENTS.md for the
+# CUDA_HOME/libnvvm setup that numba requires at JIT time.
+# numpy<2.5 is required: numba-cuda 0.30 still calls np.row_stack, which numpy
+# 2.5 removed. numba-cuda declares no upper bound, so pip will happily resolve a
+# broken combination here. Symptom: "module 'numpy' has no attribute 'row_stack'".
+numpy<2.5
+matplotlib
+numba
+numba-cuda
+# Supplies libnvvm.so (numba raises NvvmSupportError without it) and libcudart.
+nvidia-cuda-nvcc-cu12
+nvidia-cuda-runtime-cu12
+nvidia-cuda-nvrtc-cu12
