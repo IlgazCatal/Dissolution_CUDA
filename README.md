@@ -11,7 +11,9 @@ kernels; the detachment and re-adsorption decisions run on the CPU.
 ---
 ## Tested Machine Specs
 Processor: 13th Gen Intel(R) Core(TM) i7-13700H (2.40 GHz)
+
 RAM: 64 GB
+
 Graphics Card: NVIDIA GeForce RTX 4060 Laptop GPU (8 GB)
 ## Quick start
 
